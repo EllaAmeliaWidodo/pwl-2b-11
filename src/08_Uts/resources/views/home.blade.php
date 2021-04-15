@@ -7,7 +7,7 @@
             <div class="card">
 
                 <br><br>
-                <!-- <div class="card-header">{{ __('Dashboard') }}</div> -->
+                <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))

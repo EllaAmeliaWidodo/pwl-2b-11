@@ -25,10 +25,10 @@ use Illuminate\Support\Facades\Auth;
 */
 
 //Praktikum 2
-
- Route::get('/', function () {
-    return view('home');
- });
+Auth::routes();
+Route::get('/', function () {
+    return view('auth.login');
+});
 
 Route::get('/home', [HomeController::class, 'index']);
 
@@ -43,11 +43,9 @@ Route::get('/about', [HomeController::class, 'about']);
 Route::get('/contact', [HomeController::class, 'contact']);
 
 // Route::get('/features', [HomeController::class, 'features']);
-Auth::routes();
+
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

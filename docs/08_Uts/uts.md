@@ -33,6 +33,16 @@ lalu masuk ke menu home
 - tabel 1 
 ![contoh gambar](img/tabel1.png)
 
+- Edit data
+![contoh gambar](img/edit.png)
+
+- Show data
+![contoh gambar](img/show.png)
+
+- delete data
+![contoh gambar](img/delete.png)
+
+
 
 
 CONTOH KODE PROGRAM <br>

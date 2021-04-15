@@ -9,7 +9,7 @@ class index extends Model
 {
     protected $table = "posts";
     protected $fillable = [
-        'tittle',
+        'title',
         'content',
         'image',
         'user_id',
