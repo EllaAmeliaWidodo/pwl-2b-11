@@ -44,7 +44,8 @@
 
         <td>{{ $Mahasiswa->Nim }}</td>
         <td>{{ $Mahasiswa->Nama }}</td>
-        <td></td>
+        <td>
+        <img width="100px" src="{{asset('storage/'.$Mahasiswa->photo)}}" alt="image" style="object-fit: cover"></td>
         <td>{{ $Mahasiswa->Kelas->nama_kelas }}</td>
         <td>{{ $Mahasiswa->Jurusan }}</td>
         <td>{{ $Mahasiswa->No_Handphone }}</td>

@@ -56,6 +56,11 @@
                         <label for="Tgl_lahir">Tgl_lahir</label>
                         <input type="date" name="Tgl_lahir" class="form-control" id="Tgl_lahir" value="{{$Mahasiswa->Tgl_lahir}}" ariadescribedby="No_Handphone">
                     </div>
+                    <div class="form-group">
+                        <label for="image">Foto</label>
+                        <input type="file" class="form-control" required="required" name="image" value="{{$Mahasiswa->photo}}"></br>
+                        <img width="150px" src="{{asset('storage/'.$Mahasiswa->photo)}}">
+                    </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>

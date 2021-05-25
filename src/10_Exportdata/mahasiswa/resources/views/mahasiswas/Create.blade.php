@@ -62,6 +62,10 @@
                             <input type="date" class="form-control" name="Tgl_lahir" type="date" id="Tgl_lahir">
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label for="image">Foto: </label>
+                        <input type="file" class="form-control" required="required" name="image" id="image">
+                    </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>

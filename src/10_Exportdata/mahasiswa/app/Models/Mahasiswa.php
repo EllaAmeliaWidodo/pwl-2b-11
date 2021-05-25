@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\Mahasiswa as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model; //Model Eloquent
+use App\Models\Mahasiswa;
 
 
 
@@ -23,6 +24,7 @@ class Mahasiswa extends Model //Definisi Model
     protected $fillable = [
         'Nim',
         'Nama',
+        'photo',
         'Kelas_id',
         'Jurusan',
         'No_Handphone',
@@ -38,4 +40,5 @@ class Mahasiswa extends Model //Definisi Model
     {
         return $this->belongsToMany(MataKuliah::class, 'mahasiswa_matakuliah', 'mahasiswa_id', 'matakuliah_id')->withPivot('nilai');
     }
+    use HasFactory;
 };
