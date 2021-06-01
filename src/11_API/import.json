@@ -1,0 +1,212 @@
+{
+    "info": {
+        "_postman_id": "520de3e7-2186-442b-a6de-ef152ebcb62e",
+        "name": "Todo Api",
+        "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Auth",
+            "item": [
+                {
+                    "name": "Register",
+                    "id": "307bb612-e6a5-4f00-a2b2-1729d069dab2",
+                    "protocolProfileBehavior": {
+                        "disabledSystemHeaders": {}
+                    },
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"User Dummy\",\n    \"email\": \"dummy@gmail.com\",\n    \"password\": \"rahasiabanget\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "{{baseurl}}/api/register"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Login",
+                    "id": "330adbdc-e39d-4d0e-bff6-f82da6fd3f1e",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"dummy@gmail.com\",\n    \"password\": \"rahasiabanget\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "{{baseurl}}/api/login"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Logout",
+                    "id": "81bfb381-e1e6-4adc-8a5c-7202931380ee",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{token}}"
+                            }
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "url": "{{baseurl}}/api/logout"
+                    },
+                    "response": []
+                }
+            ],
+            "id": "2cf102eb-caea-4a8e-b121-7a1385c7b29b"
+        },
+        {
+            "name": "Todo",
+            "item": [
+                {
+                    "name": "List Todo",
+                    "id": "2050085d-0169-4a90-b5fb-00fe3c6b58f7",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{token}}"
+                            }
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "url": "{{baseurl}}/api/todos"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Add Todo",
+                    "id": "de23ad91-3bd9-47da-b2eb-c78c46bf3dbb",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{token}}"
+                            }
+                        },
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"todo\": \"Mengerjakan Tugas\",\n    \"label\": \"important\",\n    \"done\": false\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "{{baseurl}}/api/todos"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Todo",
+                    "id": "7e223834-80f0-4b3b-b92a-40660238b0bc",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{token}}"
+                            }
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "url": "{{baseurl}}/api/todos/1"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update Todo",
+                    "id": "da646ab9-5a32-4290-8e15-f90eac0426f9",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{token}}"
+                            }
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"todo\": \"Mengerjakan Tugas Lanjut\",\n    \"label\": \"important\",\n    \"done\": true\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "{{baseurl}}/api/todos/1"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete Todo",
+                    "id": "8746c2b8-a577-4068-92e8-775bd3ee36cc",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{token}}"
+                            }
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "url": "{{baseurl}}/api/todos/1"
+                    },
+                    "response": []
+                }
+            ],
+            "id": "75fb791c-9c05-4ce9-9d72-3990f37617c6"
+        }
+    ]
+}
