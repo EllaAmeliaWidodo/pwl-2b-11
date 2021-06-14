@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ContentController;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
@@ -41,6 +41,7 @@ Route::get('/program', [HomeController::class, 'program']);
 Route::get('/about', [HomeController::class, 'about']);
 
 Route::get('/contact', [HomeController::class, 'contact']);
+Route::get('/contents/index', [ContentController::class, 'index']);
 
 // Route::get('/features', [HomeController::class, 'features']);
 
@@ -51,3 +52,4 @@ Route::get('/contact', [HomeController::class, 'contact']);
 
 Route::resource('profil', ProfilController::class);
 Route::resource('data', PostController::class);
+Route::resource('contents', ContentController::class);
